@@ -1,0 +1,35 @@
+name: whitepaper
+version: 0.1.0.0
+license: CC
+license-file: LICENSE
+copyright: (c) Sean Westfall
+author: Sean Westfall
+maintainer: Sean Westfall <sean.westfall@gmail.com>
+bug-reports: mailto:sean.westfall@gmail.com
+stability: stable
+homepage: https://github.com/seanwestfall/whitepaper
+synopsis: A whitepaper template library in haskell that includes templates for academic, research / policy, consulting, and proposals, and automatic translations.
+category: Console, Text
+cabal-version: >= 1.6
+build-type: Simple
+
+Description:
+  A whitepaper template library in haskell that includes templates 
+  for academic, research / policy, consulting, and proposals, and 
+  automatic translations.
+
+source-repository head
+  type:     darcs
+  location: http://darcs.haskell.org/hello/
+
+flag threaded
+  default: False
+
+executable hello
+  hs-source-dirs: src
+  main-is: hello.hs
+  build-depends: base >= 4.2 && < 5
+
+  if flag(threaded)
+     ghc-options: -threaded
+
